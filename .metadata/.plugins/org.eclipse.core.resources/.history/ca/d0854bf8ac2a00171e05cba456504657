@@ -1,0 +1,8 @@
+package Meals;
+//import Meals.Order;
+public class Dinner extends Order{
+	public void main(String[] args){
+	OrderMeal();
+	}
+
+}

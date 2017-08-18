@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="titl">Hiragana Hero</title>
+
+    <link rel="stylesheet" type="text/css" href="css.css" media="screen"/>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+
+    <script type="text/javascript">
+    </script>
+
+
+</head>
+<body>
+
+<form name="frmUser" method="post" action="">
+    <div class="message"><?php if($message!="") { echo $message; } ?></div>
+    <table border="0" cellpadding="10" cellspacing="1" width="500" align="center" class="tblLogin">
+        <tr class="tableheader">
+            <td align="center" colspan="2">Enter Login Details</td>
+        </tr>
+        <tr class="tablerow">
+            <td>
+                <input type="text" name="userName" placeholder="User Name" class="login-input"></td>
+        </tr>
+        <tr class="tablerow">
+            <td>
+                <input type="password" name="password" placeholder="Password" class="login-input"></td>
+        </tr>
+        <tr class="tableheader">
+            <td align="center" colspan="2"><input type="submit" name="submit" value="Submit" class="btnSubmit"></td>
+        </tr>
+    </table>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+<div #all>
+    <section class="sticky">
+        <div align="center" id="heading">HIRAGANA HERO</div>
+        <div id="setbuttons">
+            <button type="button" class="btn" id="aset">smile <br>
+                <div id="a"><em>a</em></div>
+                <br></button>
+            <span class="makesomeroomplease"></span>
+            <button type="button" class="btn" id="iset">seven <br>
+                <div id="i"><em>i</em></div>
+                <br></button>
+            <span class="makesomeroomplease"></span>
+            <button type="button" class="btn" id="uset">times <br>
+                <div id="u"><em>u</em></div>
+                <br></button>
+            <span class="makesomeroomplease"></span>
+            <button type="button" class="btn" id="eset">frown <br>
+                <div id="e"><em>e</em></div>
+                <br></button>
+            <span class="makesomeroomplease"></span>
+            <button type="button" class="btn" id="oset">once. <br>
+                <div id="o"><em>o</em></div>
+                <br></button>
+        </div>
+        <div id="setbuttons2">
+            <button type="button" class="btn2" id="aset2"><em><</em></button>
+            <span class="makesomeroomplease"></span><span class="makesomeroomplease"></span>
+            <button type="button" class="btn2" id="iset2"><em><</em></button>
+            <span class="makesomeroomplease"></span><span class="makesomeroomplease"></span>
+            <button type="button" class="btn2" id="uset2"><em><</em></button>
+            <span class="makesomeroomplease"></span><span class="makesomeroomplease"></span>
+            <button type="button" class="btn2" id="eset2"><em><</em></button>
+            <span class="makesomeroomplease"></span><span class="makesomeroomplease"></span>
+            <button type="button" class="btn2" id="oset2"><em><</em></button>
+        </div>
+    </section>
+
+    <table id="quiztab">
+        <tr id="thisRow"></tr>
+    </table>
+
+
+    <table id="traintab">
+        <tr id="picRow"></tr>
+    </table>
+
+
+    <table id="table">
+        <tr>
+            <td>
+                a
+                <img id="a1"  id="a1" src="a.png" height=50
+                     width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Hiragana_%E3%81%82_stroke_order_animation.gif/180px-Hiragana_%E3%81%82_stroke_order_animation.gif"
+                     height=100 width=100/>
+
+            </td>
+            <td>
+                i
+                <img id="b2" src="i.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Hiragana_%E3%81%84_stroke_order_animation.gif/180px-Hiragana_%E3%81%84_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                u
+                <img id="c3" src="u.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Hiragana_%E3%81%86_stroke_order_animation.gif/180px-Hiragana_%E3%81%86_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                e
+                <img id="d4" src="e.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Hiragana_%E3%81%88_stroke_order_animation.gif/180px-Hiragana_%E3%81%88_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                o
+                <img id="e5" src="o.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Hiragana_%E3%81%8A_stroke_order_animation.gif/180px-Hiragana_%E3%81%8A_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                ka
+                <img id="f6" src="ka.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Hiragana_%E3%81%8B_stroke_order_animation.gif/180px-Hiragana_%E3%81%8B_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                ki
+                <img id="g7" src="ki.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Hiragana_%E3%81%8D_stroke_order_animation.gif/180px-Hiragana_%E3%81%8D_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                ku
+                <img id="h8" src="ku.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Hiragana_%E3%81%8F_stroke_order_animation.gif/180px-Hiragana_%E3%81%8F_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                ke
+                <img id="i9" src="ke.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Hiragana_%E3%81%91_stroke_order_animation.gif/180px-Hiragana_%E3%81%91_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                ko
+                <img id="j10" src="ko.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Hiragana_%E3%81%93_stroke_order_animation.gif/180px-Hiragana_%E3%81%93_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                sa
+                <img id="k11" src="sa.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Hiragana_%E3%81%95_stroke_order_animation.gif/180px-Hiragana_%E3%81%95_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                shi
+                <img id="l12" src="shi.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Hiragana_%E3%81%97_stroke_order_animation.gif/180px-Hiragana_%E3%81%97_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                su
+                <img id="m13" src="su.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Hiragana_%E3%81%99_stroke_order_animation.gif/180px-Hiragana_%E3%81%99_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                se
+                <img id="n14" src="se.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Hiragana_%E3%81%9B_stroke_order_animation.gif/180px-Hiragana_%E3%81%9B_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                so
+                <img id="o15" src="so.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Hiragana_%E3%81%9D_stroke_order_animation.gif/180px-Hiragana_%E3%81%9D_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                ta
+                <img id="p16" src="ta.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Hiragana_%E3%81%9F_stroke_order_animation.gif/180px-Hiragana_%E3%81%9F_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                chi
+                <img id="q17" src="chi.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hiragana_%E3%81%A1_stroke_order_animation.gif/180px-Hiragana_%E3%81%A1_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                tsu
+                <img id="r18" src="tsu.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Hiragana_%E3%81%A4_stroke_order_animation.gif/120px-Hiragana_%E3%81%A4_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                te
+                <img id="s19" src="te.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Hiragana_%E3%81%A6_stroke_order_animation.gif/180px-Hiragana_%E3%81%A6_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                to
+                <img id="t20" src="to.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Hiragana_%E3%81%A8_stroke_order_animation.gif/180px-Hiragana_%E3%81%A8_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                na
+                <img id="u21" src="na.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Hiragana_%E3%81%AA_stroke_order_animation.gif/180px-Hiragana_%E3%81%AA_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                ni
+                <img id="v22" src="ni.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hiragana_%E3%81%AB_stroke_order_animation.gif/180px-Hiragana_%E3%81%AB_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                nu
+                <img id="w23" src="nu.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Hiragana_%E3%81%AC_stroke_order_animation.gif/180px-Hiragana_%E3%81%AC_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                ne
+                <img id="x24" src="ne.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Hiragana_%E3%81%AD_stroke_order_animation.gif/180px-Hiragana_%E3%81%AD_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                no
+                <img id="y25" src="no.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Hiragana_%E3%81%AE_stroke_order_animation.gif/180px-Hiragana_%E3%81%AE_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                ha
+                <img id="z26" src="ha.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Hiragana_%E3%81%AF_stroke_order_animation.gif/180px-Hiragana_%E3%81%AF_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                hi
+                <img id="z27" src="hi.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Hiragana_%E3%81%B2_stroke_order_animation.gif/180px-Hiragana_%E3%81%B2_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                fu
+                <img id="z28" src="fu.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Hiragana_%E3%81%B5_stroke_order_animation.gif/180px-Hiragana_%E3%81%B5_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                he
+                <img id="z29" src="he.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Hiragana_%E3%81%B8_stroke_order_animation.gif/180px-Hiragana_%E3%81%B8_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                ho
+                <img id="z30" src="ho.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Hiragana_%E3%81%BB_stroke_order_animation.gif/180px-Hiragana_%E3%81%BB_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                ma
+                <img id="z31" src="ma.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Hiragana_%E3%81%BE_stroke_order_animation.gif/180px-Hiragana_%E3%81%BE_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                mi
+                <img id="z32" src="mi.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Hiragana_%E3%81%BF_stroke_order_animation.gif/180px-Hiragana_%E3%81%BF_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                mu
+                <img id="z33" src="mu.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Hiragana_%E3%82%80_stroke_order_animation.gif/180px-Hiragana_%E3%82%80_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                me
+                <img id="z34" src="me.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Hiragana_%E3%82%81_stroke_order_animation.gif/180px-Hiragana_%E3%82%81_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                mo
+                <img id="z35" src="mo.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Hiragana_%E3%82%82_stroke_order_animation.gif/180px-Hiragana_%E3%82%82_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ya
+                <img id="z36" src="ya.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Hiragana_%E3%82%84_stroke_order_animation.gif/180px-Hiragana_%E3%82%84_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+            </td>
+
+            <td>
+                yu
+                <img id="z37" src="yu.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Hiragana_%E3%82%86_stroke_order_animation.gif/180px-Hiragana_%E3%82%86_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+            </td>
+            <td>
+                yo
+                <img id="z38" src="yo.png" height=50 width=50/>
+                <img class="justOncePlay" id="zl2"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Hiragana_%E3%82%88_stroke_order_animation.gif/180px-Hiragana_%E3%82%88_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ra
+                <img id="z39" src="ra.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Hiragana_%E3%82%89_stroke_order_animation.gif/180px-Hiragana_%E3%82%89_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                ri
+                <img id="z40" src="ri.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hiragana_%E3%82%8A_stroke_order_animation.gif/180px-Hiragana_%E3%82%8A_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                ru
+                <img id="z41" src="ru.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Hiragana_%E3%82%8B_stroke_order_animation.gif/180px-Hiragana_%E3%82%8B_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+
+            <td>
+                re
+                <img id="z42" src="re.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Hiragana_%E3%82%8C_stroke_order_animation.gif/180px-Hiragana_%E3%82%8C_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td>
+                ro
+                <img id="z43" src="ro.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Hiragana_%E3%82%8D_stroke_order_animation.gif/180px-Hiragana_%E3%82%8D_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                wa
+                <img id="z44" src="wa.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Hiragana_%E3%82%8F_stroke_order_animation.gif/180px-Hiragana_%E3%82%8F_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                wo
+                <img id="z45" src="wo.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Hiragana_%E3%82%92_stroke_order_animation.gif/180px-Hiragana_%E3%82%92_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                n
+                <img id="z46" src="n.png" height=50 width=50/>
+                <img class="justOncePlay"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Hiragana_%E3%82%93_stroke_order_animation.gif/180px-Hiragana_%E3%82%93_stroke_order_animation.gif"
+                     height=100 width=100/>
+            </td>
+        </tr>
+    </table>
+
+</div>
+<div id="quizdiv" class = "quizbtn">
+    <button type="button" id="quizbtn1" class="btn"><em>a quiz</em></button>
+</div>
+<div id="wiz">
+
+    <div id="topbar">Quiz</div>
+    <div class="spacer"></div>
+    <div id="navContent">
+        <div id="game1"></div>
+        <div id="game2"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<div id="footer">
+    <p>SOURCES:<span class="makesomeroomplease"></span>
+        <a href="http://api.jqueryui.com/" target="_blank">Jquery User Interface</a><span
+                class="makesomeroomplease"></span>
+        <a href="https://medium.com/@mariusc23/hide-header-on-scroll-down-show-on-scroll-up-67bbaae9a78c"
+           target="_blank">Scroll Behind Header</a>
+        <span class="makesomeroomplease"></span>
+        <a href="https://www.w3schools.com/html/html_links.asp" target="_blank">Link Styling</a><span
+                class="makesomeroomplease"></span>
+        <a href="https://jqueryui.com/toggle/" target="_blank">Toggle Happy</a><span class="makesomeroomplease"></span>
+        <a href="https://www.w3schools.com/jquery/html_append.asp" target="_blank">Append()-ing</a><span
+                class="makesomeroomplease"></span>
+        <a href="https://www.w3schools.com/jquery/event_scroll.asp" target="_blank">Scrolling</a><span
+                class="makesomeroomplease"></span>
+        <a href="http://www.jquerybyexample.net/2013/04/how-to-display-load-images-from-json-file-jquery.html"
+           target="_blank">Using Images with JSON</a><span class="makesomeroomplease"></span>
+        <a href="http://mrbool.com/how-to-create-a-sign-up-form-registration-with-php-and-mysql/28675#ixzz4drPbDBpk" target="_blank">Mysql Ajax Authent</a><span
+                class="makesomeroomplease"></span>
+        <a href="https://www.w3schools.com/jquery/html_append.asp" target="_blank">Append()-ing</a><span
+                class="makesomeroomplease"></span>
+        <a href="https://www.w3schools.com/jquery/html_append.asp" target="_blank">Append()-ing</a>
+    </p>
+    <p>© march 2017 ryan david foster</p>
+</div>
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    jQuery(function ($) {
+        $('.build-wrap').formBuilder();
+    });*/
+
+
+    // fix header on scroll
+
+
+    var stickyOffset = $('.sticky').offset().top;
+
+    $(window).scroll(function () {
+        var sticky = $('.sticky'),
+            scroll = $(window).scrollTop();
+
+        if (scroll > stickyOffset) sticky.addClass('fixed'); // isolating this detail is why they pay me the big bucks
+        else sticky.removeClass('fixed');
+    });
+
+    //-----------------------
+
+
+    // use variable to see which training set is selected
+    var thisSet = 0;
+    var testSet = '';
+    // show strokes on mouse hover
+    $("img").hover(
+        function () {
+            $(this).css("background", "gray");
+            $(this).next().css("visibility", "visible");
+            $(this).css('cursor', 'none');
+        },
+        function () {
+            $(this).css("background", "white");
+            $(this).next().css("visibility", "hidden");
+        }
+    );
+    // create an array of audio file variables, then for-each 'em into the obj.src
+    var array = ["", "a.mp3", "i.mp3", "u.mp3", "e.mp3", "o.mp3", "ka.mp3", "ki.mp3",
+        "ku.mp3", "ke.mp3", "ko.mp3", "sa.mp3", "shi.mp3", "su.mp3", "se.mp3", "so.mp3",
+        "ta.mp3", "chi.mp3", "tsu.mp3", "te.mp3", "to.mp3", "na.mp3", "ni.mp3", "nu.mp3",
+        "ne.mp3", "no.mp3", "ha.mp3", "hi.mp3", "fu.mp3", "he.mp3", "ho.mp3", "ma.mp3",
+        "mi.mp3", "mu.mp3", "me.mp3", "mo.mp3", "ya.mp3", "yu.mp3", "yo.mp3", "ra.mp3",
+        "ri.mp3", "ru.mp3", "re.mp3", "ro.mp3", "wa.mp3", "wo.mp3", "n.mp3"];
+
+    $("img").click(function () {
+        var i = $(this).attr("id").substring(1);
+        new Audio(array[i]).play();
+    });
+    // emphasize corresponding training set on button hover
+
+    $(".btn").hover(
+        function () {
+            $(this).css("width", "4em");
+            $(this).css("height", "4em");
+            $(this).css("border", "none");
+            $(this).css("box-shadow", "none");
+            $(this).css("background-color", "white");
+            $(this).css("font-weight", "900");
+            $(this).css("font-size", "30");
+            $(this).css("color", "lightgrey");
+        },
+        function () {
+            $(this).css("width", "");
+            $(this).css("height", "");
+            $(this).css("border", "");
+            $(this).css("box-shadow", "");
+            $(this).css("background-color", "");
+            $(this).css("font-weight", "");
+            $(this).css("font-size", "");
+            $(this).css("color", "");
+        }
+    );
+    // store button set reference in variable 1
+    var arr1 = ["a", "ka", "sa", "ta", "na", "ha", "ma", "ya", "ra", "wa", "n"];
+    var png1 = ["<img id = 'a1' height = 50 weight = 50 src = ",
+        "<img id = 'f6' height = 50 weight = 50  src = ",
+        "<img id = 'k11' height = 50 weight = 50 src = ",
+        "<img id = 'p16' height = 50 weight = 50 src = ",
+        "<img id = 'u21' height = 50 weight = 50 src = ",
+        "<img id = 'z26' height = 50 weight = 50 src = ",
+        "<img id = 'z31' height = 50 weight = 50 src = ",
+        "<img id = 'z36' height = 50 weight = 50 src = ",
+        "<img id = 'z39' height = 50 weight = 50 src = ",
+        "<img id = 'z44' height = 50 weight = 50 src = ",
+        "<img id = 'z46' height = 50 weight = 50 src = "]; // START HERE
+    // populate quiz table on button click with corresponding data
+    $("#aset").click(
+        function () {
+            if($(this).css.display = "none"){$("#table").show();}
+            else{$("#table").hide();}
+           // $("#table").toggle();
+            $("#thisRow td").remove(); // reset table
+            $("#picRow td").remove();
+            $("#quiztab").css("background", "black");
+            var testSet = "";
+            for (var i = 0; i < arr1.length; i++) {
+                var x = "<td>" + arr1[i] + "</td>";
+                var y = $(x).attr('id', 'a' + i); // jquery seems to require variables for implementation (here: y)
+                testSet += x;
+                // alert($(y).attr('id'));
+            }
+            $("#thisRow").append(testSet);
+            //$("</tr>").append(testSet);
+            $("#quiztab").show(); // ****
+            thisSet = 1;
+            $("#thisRow td").hover(
+                function () {
+                    $(this).css("color", "deepskyblue");
+                },
+                function () {
+                    $(this).css("color", "");
+                }
+            );
+            $("#thisRow td").click(
+                function () {
+                    if($("#picRow").css.display = "none"){$("#picRow").show();}
+                    else{$("#picRow").hide();}
+                    $("#picRow td").remove(); // reset table
+                    var dex = 0;
+                    var testSet2 = "";
+
+                    var pic = $(this).html();
+                    dex = arr1.indexOf(pic);  // jquery likes vars
+                    // alert(dex);
+                    // alert(png2[dex]);
+                    var x2 = "<td>" + png1[dex] + "'" + pic + ".png'" + "/></td>";
+                    //alert(x2);
+                    testset2 = x2;
+                    $("#picRow").append(x2);
+                    //dex=0;
+                    $("#traintab").show();
+                });
+        });
+
+    var arr2 = ["i", "ki", "shi", "chi", "ni", "hi", "mi", "ri"];
+    var png2 = ["<img id = 'b2' height = 50 weight = 50 src = ",
+        "<img id = 'g7' height = 50 weight = 50 src = ",
+        "<img id = 'l12' height = 50 weight = 50 src = ",
+        "<img id = 'q17' height = 50 weight = 50 src = ",
+        "<img id = 'v22' height = 50 weight = 50 src = ",
+        "<img id = 'z27' height = 50 weight = 50 src = ",
+        "<img id = 'z32' height = 50 weight = 50 src = ",
+        "<img id = 'z40' height = 50 weight = 50 src = "]; // START HERE
+    // populate quiz table on button click with corresponding data
+    $("#iset").click(
+        function () {
+            if($(this).css.display = "none"){$("#table").show();}
+            else{$("#table").hide();}
+            //$("#table").toggle();
+            $("#thisRow td").remove(); // reset table
+            $("#picRow td").remove();
+            $("#quiztab").css("background", "black");
+            var testSet = "";
+            for (var i = 0; i < arr2.length; i++) {
+                var x = "<td>" + arr2[i] + "</td>";
+                var y = $(x).attr('id', 'i' + i); // jquery seems to require variables for implementation (here: y)
+                testSet += x;
+                //alert($(y).attr('id'));
+            }
+            $("#thisRow").append(testSet);
+            $("#quiztab").show(); //*****
+            thisSet = 2;
+            //-----------------------------------------****************************************************
+            /* $("#picRow td").remove(); // reset table
+             var testSet2 = "";
+             //var dex = arr2.indexOf($(this));
+             var x = "<td>" + png2[i] + "</td>";
+             var y = $(x).attr('id', 'i' + i); // jquery seems to require variables for implementation (here: y)
+             testSet2 += x;
+             //alert($(y).attr('id'));
+             $("#picRow").append(testSet2);
+             $("#traintab").toggle();
+             */
+
+
+            //----------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            $("#thisRow td").hover(
+                function () {
+                    $(this).css("color", "lawngreen");
+                },
+                function () {
+                    $(this).css("color", "");
+                }
+            );
+            $("#thisRow td").click(
+                function () {
+                    if($("#picRow").css.display = "none"){$("#picRow").show();}
+                    else{$("#picRow").hide();}
+                    $("#picRow td").remove(); // reset table
+                    var dex = 0;
+                    var testSet2 = "";
+
+                    var pic = $(this).html();
+                    dex = arr2.indexOf(pic);  // jquery likes vars
+                    // alert(dex);
+                    // alert(png2[dex]);
+                    var x2 = "<td>" + png2[dex] + "'" + pic + ".png'" + "/></td>";
+                    //alert(x2);
+                    testset2 = x2;
+                    $("#picRow").append(x2);
+                    //dex=0;
+                    $("#traintab").show();  //*****
+                });
+        });
+
+    var arr3 = ["u", "ku", "su", "tsu", "nu", "fu", "mu", "yu", "ru"];
+    var png3 = ["<img id = 'c3' height = 50 weight = 50 src = ",
+        "<img id = 'h8' height = 50 weight = 50 src = ",
+        "<img id = 'm13' height = 50 weight = 50 src = ",
+        "<img id = 'r18' height = 50 weight = 50 src = ",
+        "<img id = 'w23' height = 50 weight = 50 src = ",
+        "<img id = 'z28' height = 50 weight = 50 src = ",
+        "<img id = 'z33' height = 50 weight = 50 src = ",
+        "<img id = 'z37' height = 50 weight = 50 src = ",
+        "<img id = 'z41' height = 50 weight = 50 src = "]; // START HERE
+    // populate quiz table on button click with corresponding data
+    $("#uset").click(
+        function () {
+            if($(this).css.display = "none"){$("#table").show();}
+            else{$("#table").hide();}
+           // $("#table").toggle(); // no peeking!
+            $("#thisRow td").remove(); // reset table
+            $("#picRow td").remove();
+            $("#quiztab").css("background", "black");
+            var testSet = "";
+            for (var i = 0; i < arr3.length; i++) {
+                var x = "<td>" + arr3[i] + "</td>";
+                var y = $(x).attr('id', 'u' + i); // jquery seems to require variables for implementation (here: y)
+                testSet += x;
+                // alert($(y).attr('id'));
+            }
+            $("#thisRow").append(testSet); // fill table
+            $("#quiztab").show(); // show table
+            thisSet = 3;
+            $("#thisRow td").hover(
+                function () {
+                    $(this).css("color", "yellow");
+                },
+                function () {
+                    $(this).css("color", "");
+                }
+            );
+            $("#thisRow td").click(
+                function () {
+                    //-----------------------
+                    if($("#picRow").css.display = "none"){$("#picRow").show();}
+                    else{$("#picRow").hide();}
+                    $("#picRow td").remove(); // reset table
+                    var dex = 0;
+                    var testSet2 = "";
+
+                    var pic = $(this).html();
+                    dex = arr3.indexOf(pic);  // jquery likes vars
+                    // alert(dex);
+                    // alert(png2[dex]);
+                    var x2 = "<td>" + png3[dex] + "'" + pic + ".png'" + "/></td>";
+                    //  alert(x2);
+                    testset2 = x2;
+                    $("#picRow").append(x2);
+                    //dex=0;
+
+                    //----------------------
+                    $("#traintab").show(); //***
+                });
+        });
+    var arr4 = ["e", "ke", "se", "te", "ne", "he", "me", "re"];
+    var png4 = ["<img id = 'd4' height = 50 weight = 50 src = ",
+        "<img id = 'i9' height = 50 weight = 50 src = ",
+        "<img id = 'n14' height = 50 weight = 50 src = ",
+        "<img id = 's19' height = 50 weight = 50 src = ",
+        "<img id = 'x24' height = 50 weight = 50 src = ",
+        "<img id = 'z29' height = 50 weight = 50 src = ",
+        "<img id = 'z34' height = 50 weight = 50 src = ",
+        "<img id = 'z42' height = 50 weight = 50 src = "]; // START HERE
+    // populate quiz table on button click with corresponding data
+    $("#eset").click(
+        function () {
+            if($(this).css.display = "none"){$("#table").show();}
+            else{$("#table").hide();}
+           // $("#table").toggle();
+            $("#thisRow td").remove(); // reset table
+            $("#picRow td").remove();
+            $("#quiztab").css("background", "black");
+            var testSet = "";
+            for (var i = 0; i < arr4.length; i++) {
+                var x = "<td>" + arr4[i] + "</td>";
+                var y = $(x).attr('id', 'e' + i); // jquery seems to require variables for implementation (here: y)
+                testSet += x;
+                // alert($(y).attr('id'));
+            }
+            $("#thisRow").append(testSet);
+            $("#quiztab").show();
+            thisSet = 4;
+            $("#thisRow td").hover(
+                function () {
+                    $(this).css("color", "orangered");
+                },
+                function () {
+                    $(this).css("color", "");
+                }
+            );
+            $("#thisRow td").click(
+                function () {
+                    if($("#picRow").css.display = "none"){$("#picRow").show();}
+                    else{$("#picRow").hide();}
+                    $("#picRow td").remove(); // reset table
+                    var dex = 0;
+                    var testSet2 = "";
+
+                    var pic = $(this).html();
+                    dex = arr4.indexOf(pic);  // jquery likes vars
+                    // alert(dex);
+                    // alert(png2[dex]);
+                    var x2 = "<td>" + png4[dex] + "'" + pic + ".png'" + "/></td>";
+                    //alert(x2);
+                    testset2 = x2;
+                    $("#picRow").append(x2);
+                    //dex=0;
+                    $("#traintab").show();
+                });
+        });
+    var arr5 = ["o", "ko", "so", "to", "no", "ho", "mo", "yo", "ro", "wo"];
+    var png5 = ["<img id = 'e5' height = 50 weight = 50 src = ",
+        "<img id = 'j10' height = 50 weight = 50 src = ",
+        "<img id = 'o15' height = 50 weight = 50 src = ",
+        "<img id = 't20' height = 50 weight = 50 src = ",
+        "<img id = 'y25' height = 50 weight = 50 src = ",
+        "<img id = 'z30' height = 50 weight = 50 src = ",
+        "<img id = 'z35' height = 50 weight = 50 src = ",
+        "<img id = 'z38' height = 50 weight = 50 src = ",
+        "<img id = 'z43' height = 50 weight = 50 src = ",
+        "<img id = 'z45' height = 50 weight = 50 src = "]; // START HERE
+    // populate quiz table on button click with corresponding data
+    $("#oset").click(
+        function () {
+            if($(this).css.display = "none"){$("#table").show();}
+            else{$("#table").hide();}
+            //$("#table").toggle();
+            $("#thisRow td").remove(); // reset table
+            $("#picRow td").remove();
+            $("#quiztab").css("background", "black");
+            var testSet = "";
+            for (var i = 0; i < arr5.length; i++) {
+                var x = "<td>" + arr5[i] + "</td>";
+                var y = $(x).attr('id', 'o' + i); // jquery seems to require variables for implementation (here: y)
+                testSet += x;
+                //alert($(y).attr('id'));
+            }
+            $("#thisRow").append(testSet);
+            $("#quiztab").show();
+            thisSet = 5;
+            $("#thisRow td").hover(
+                function () {
+                    $(this).css("color", "violet");
+                },
+                function () {
+                    $(this).css("color", "");
+                }
+            );
+            $("#thisRow td").click(
+                function () {
+                    if($("#picRow").css.display = "none"){$("#picRow").show();}
+                    else{$("#picRow").hide();}
+                    $("#picRow td").remove(); // reset table
+                    var dex = 0;
+                    var testSet2 = "";
+
+                    var pic = $(this).html();
+                    dex = arr5.indexOf(pic);  // jquery likes vars
+                    // alert(dex);
+                    // alert(png2[dex]);
+                    var x2 = "<td>" + png5[dex] + "'" + pic + ".png'" + "/></td>";
+                    //alert(x2);
+                    testset2 = x2;
+                    $("#picRow").append(x2);
+                    //dex=0;
+                    $("#traintab").show();
+                });
+        });
+
+
+    //---------------------on btn click, show btn2
+
+    $(".btn").click(
+        function () {
+            //$(".btn2").show();
+            if($(".btn2").css.display = "none"){$(".btn2").show();}
+            else{$(".btn2").hide();}
+        });
+    //----------------------------btn2 click to show images in row (reverse)
+    $("#aset2").click(   // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        function () {
+            if($("#thisRow").css.display = "none"){$("#thisRow").show();}
+            else{$("#thisRow").hide();}
+            $("#thisRow td").remove(); // reset table
+            $("#picRow td").remove();
+            var testSet = "";
+            for (var i = 0; i < arr1.length; i++) {
+                var x = "<td>" + png1[i] + "'" + arr1[i] + ".png'" + "/></td>";
+                //alert(x);
+                testSet += x;
+            }
+            $("#thisRow").append(testSet);
+            //$("</tr>").append(testSet);
+            $("#quiztab").css("background", "white");
+            $("#quiztab").show(); // now shows images instead of romaji
+            thisSet = 1;
+            $("#thisRow td").hover(
+                function () {
+                    $(this).css("opacity", "0.5");
+                },
+                function () {
+                    $(this).css("opacity", "");
+                }
+            );
+            $("#thisRow td").click( // when you click an image I'll show you the romaji for it
+                function () {
+                    if($("#picRow").css.display = "none"){$("#picRow").show();}
+                    else{$("#picRow").hide();}
+                    $("#picRow td").remove(); // reset table
+                    var testSet2 = "";
+                    var dexy = $(this).index();
+                    var x2 = "<td>" + arr1[dexy] + "</td>";
+                    //alert(x2);
+                    testset2 = x2;
+                    $("#picRow").append(x2);
+                    //dex=0;
+                    $("#picRow td").css("color", "black");
+                    $("#picRow td").css("border", "none");
+                    $("#picRow td").css("font-size", "40");
+                    $("#picRow td").css("font-weight", "600");
+                    $("#traintab").show();
+                });
+        });
+    //----------------------------btn2 click to show images in row (reverse)
+    $("#iset2").click(   // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        function () {
+            if($("#thisRow").css.display = "none"){$("#thisRow").show();}
+            else{$("#thisRow").hide();}
+            $("#thisRow td").remove(); // reset table
+            $("#picRow td").remove();
+            var testSet = "";
+            for (var i = 0; i < arr2.length; i++) {
+                var x = "<td>" + png2[i] + "'" + arr2[i] + ".png'" + "/></td>";
+                //alert(x);
+                testSet += x;
+            }
+            $("#thisRow").append(testSet);
+            //$("</tr>").append(testSet);
+            $("#quiztab").css("background", "white");
+            $("#quiztab").show(); // now shows images instead of romaji
+            thisSet = 1;
+            $("#thisRow td").hover(
+                function () {
+                    $(this).css("opacity", "0.5");
+                },
+                function () {
+                    $(this).css("opacity", "");
+                }
+            );
+            $("#thisRow td").click( // when you click an image I'll show you the romaji for it
+                function () {
+                    if($("#picRow").css.display = "none"){$("#picRow").show();}
+                    else{$("#picRow").hide();}
+                    $("#picRow td").remove(); // reset table
+                    var testSet2 = "";
+                    var dexy = $(this).index();
+                    var x2 = "<td>" + arr2[dexy] + "</td>";
+                    //alert(x2);
+                    testset2 = x2;
+                    $("#picRow").append(x2);
+                    //dex=0;
+                    $("#picRow td").css("color", "black");
+                    $("#picRow td").css("border", "none");
+                    $("#picRow td").css("font-size", "40");
+                    $("#picRow td").css("font-weight", "600");
+                    $("#traintab").show();
+                });
+        });
+    //----------------------------btn2 click to show images in row (reverse)
+    $("#uset2").click(   // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        function () {
+            if($("#thisRow").css.display = "none"){$("#thisRow").show();}
+            else{$("#thisRow").hide();}
+            $("#thisRow td").remove(); // reset table
+            $("#picRow td").remove();
+            var testSet = "";
+            for (var i = 0; i < arr3.length; i++) {
+                var x = "<td>" + png3[i] + "'" + arr3[i] + ".png'" + "/></td>";
+                //alert(x);
+                testSet += x;
+            }
+            $("#thisRow").append(testSet);
+            //$("</tr>").append(testSet);
+            $("#quiztab").css("background", "white");
+            $("#quiztab").show(); // now shows images instead of romaji
+            thisSet = 1;
+            $("#thisRow td").hover(
+                function () {
+                    $(this).css("opacity", "0.5");
+                },
+                function () {
+                    $(this).css("opacity", "");
+                }
+            );
+            $("#thisRow td").click( // when you click an image I'll show you the romaji for it
+                function () {
+                    if($("#picRow").css.display = "none"){$("#picRow").show();}
+                    else{$("#picRow").hide();}
+                    $("#picRow td").remove(); // reset table
+                    var testSet2 = "";
+                    var dexy = $(this).index();
+                    var x2 = "<td>" + arr3[dexy] + "</td>";
+                    //alert(x2);
+                    testset2 = x2;
+                    $("#picRow").append(x2);
+                    //dex=0;
+                    $("#picRow td").css("color", "black");
+                    $("#picRow td").css("border", "none");
+                    $("#picRow td").css("font-size", "40");
+                    $("#picRow td").css("font-weight", "600");
+                    $("#traintab").show();
+                });
+        });
+    //----------------------------btn2 click to show images in row (reverse)
+    $("#eset2").click(   // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        function () {
+            if($("#thisRow").css.display = "none"){$("#thisRow").show();}
+            else{$("#thisRow").hide();}
+            $("#thisRow td").remove(); // reset table
+            $("#picRow td").remove();
+            var testSet = "";
+            for (var i = 0; i < arr4.length; i++) {
+                var x = "<td>" + png4[i] + "'" + arr4[i] + ".png'" + "/></td>";
+                //alert(x);
+                testSet += x;
+            }
+            $("#thisRow").append(testSet);
+            //$("</tr>").append(testSet);
+            $("#quiztab").css("background", "white");
+            $("#quiztab").show(); // now shows images instead of romaji
+            thisSet = 1;
+            $("#thisRow td").hover(
+                function () {
+                    $(this).css("opacity", "0.5");
+                },
+                function () {
+                    $(this).css("opacity", "");
+                }
+            );
+            $("#thisRow td").click( // when you click an image I'll show you the romaji for it
+                function () {
+                    if($("#picRow").css.display = "none"){$("#picRow").show();}
+                    else{$("#picRow").hide();}
+                    $("#picRow td").remove(); // reset table
+                    var testSet2 = "";
+                    var dexy = $(this).index();
+                    var x2 = "<td>" + arr4[dexy] + "</td>";
+                    //alert(x2);
+                    testset2 = x2;
+                    $("#picRow").append(x2);
+                    //dex=0;
+                    $("#picRow td").css("color", "black");
+                    $("#picRow td").css("border", "none");
+                    $("#picRow td").css("font-size", "40");
+                    $("#picRow td").css("font-weight", "600");
+                    $("#traintab").show();
+                });
+        });
+    //----------------------------btn2 click to show images in row (reverse)
+    $("#oset2").click(   // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        function () {
+            if($("#thisRow").css.display = "none"){$("#thisRow").show();}
+            else{$("#thisRow").hide();}
+            $("#thisRow td").remove(); // reset table
+            $("#picRow td").remove();
+            var testSet = "";
+            for (var i = 0; i < arr5.length; i++) {
+                var x = "<td>" + png5[i] + "'" + arr5[i] + ".png'" + "/></td>";
+                //alert(x);
+                testSet += x;
+            }
+            $("#thisRow").append(testSet);
+            //$("</tr>").append(testSet);
+            $("#quiztab").css("background", "white");
+            $("#quiztab").show(); // now shows images instead of romaji
+            thisSet = 1;
+            $("#thisRow td").hover(
+                function () {
+                    $(this).css("opacity", "0.5");
+                },
+                function () {
+                    $(this).css("opacity", "");
+                }
+            );
+            $("#thisRow td").click( // when you click an image I'll show you the romaji for it
+                function () {
+                    if($("#picRow").css.display = "none"){$("#picRow").show();}
+                    else{$("#picRow").hide();}
+                    $("#picRow td").remove(); // reset table
+                    var testSet2 = "";
+                    var dexy = $(this).index();
+                    var x2 = "<td>" + arr5[dexy] + "</td>";
+                    //alert(x2);
+                    testset2 = x2;
+                    $("#picRow").append(x2);
+                    //dex=0;
+                    $("#picRow td").css("color", "black");
+                    $("#picRow td").css("border", "none");
+                    $("#picRow td").css("font-size", "40");
+                    $("#picRow td").css("font-weight", "600");
+                    $("#traintab").show();
+                });
+        });
+
+
+    ////////////// QUIZ1
+    //
+
+
+
+
+    $("#quizbtn1").click(function () {  // clicking the class means clicking each class member. wow. really, Computer Science?
+        var selectQuiz = 0;
+        if($("#quizbtn1".click)){ selectQuiz = 1;}
+        if($("#quizbtn2".click)){ selectQuiz = 2;}
+        if($("#quizbtn3".click)){ selectQuiz = 3;}
+        if($("#quizbtn4".click)){ selectQuiz = 4;}
+        if($("#quizbtn5".click)){ selectQuiz = 5;}
+        //alert(selectQuiz).val();
+        $("#wiz").show();
+        $("#table").hide();
+        $("#quiztab").hide();
+        $("#traintab").hide();
+        $("#setbuttons").hide();
+        $("#setbuttons2").hide();
+        var questionNumber = 0;
+        var questionBank = new Array();
+        var stage = "#game1";
+        var stage2 = new Object;
+        var questionLock = false;
+        var numberOfQuestions;
+        var score = 0;
+        var selectQuiz = 1; // let's get dry, we're soaked. can't. not enough time! ahhhhhhhhhh hahaha
+
+       // var getData = "";
+       // var quizlist = "";
+       // if($("#quizbtn1".click))
+        var getData = "https://gist.githubusercontent.com/truengine/1da9a97294c90f25860a45ff0af0fa2e/raw/06c8fba615d4c5b5b4f0b144a079530b91b99181/quizlistGo.json";
+
+            //"https://gist.githubusercontent.com/truengine/60e63d75384ce579ade5793792eca80c/raw/12c847d49081e8b5943dcec95dce40c043ebfd95/hiraganatable1.json";4
+        /*
+           var quizlist = "quizlist";
+        if($("#quizbtn2".click))
+        {getData = "https://gist.githubusercontent.com/truengine/60e63d75384ce579ade5793792eca80c/raw/12c847d49081e8b5943dcec95dce40c043ebfd95/hiraganatable2.json";
+            quizlist = "quizlist2";}
+        if($("#quizbtn3".click))
+        {getData = "https://gist.githubusercontent.com/truengine/60e63d75384ce579ade5793792eca80c/raw/12c847d49081e8b5943dcec95dce40c043ebfd95/hiraganatable3.json";
+            quizlist = "quizlist3";}
+        if($("#quizbtn4".click))
+        {getData = "https://gist.githubusercontent.com/truengine/60e63d75384ce579ade5793792eca80c/raw/12c847d49081e8b5943dcec95dce40c043ebfd95/hiraganatable4.json";
+            quizlist = "quizlist4";}
+        if($("#quizbtn5".click))
+        {getData = "https://gist.githubusercontent.com/truengine/60e63d75384ce579ade5793792eca80c/raw/12c847d49081e8b5943dcec95dce40c043ebfd95/hiraganatable5.json";
+            quizlist = "quizlist5";}*/
+
+        $.getJSON(getData, function (data) {
+            //if($("#wiz").css.display = "none"){stage = "#game1"; $("#wiz").toggle();}
+            //else{$("#wiz").hide();$("#table").show(); $("#setbuttons").show();}
+            for (i = 0; i < data.quizlist.length; i++) {
+                questionBank[i] = new Array;
+                var makeImg = data.quizlist[i].question;
+                var imgQ = '<img height=50 width=50 src= " ' + makeImg + '">';
+                questionBank[i][0] = imgQ;//data.quizlist[i].question;
+                questionBank[i][1] = data.quizlist[i].option1;
+                questionBank[i][2] = data.quizlist[i].option2;
+                questionBank[i][3] = data.quizlist[i].option3;
+                questionBank[i][4] = data.quizlist[i].option4;
+            }
+            numberOfQuestions = questionBank.length;
+
+
+            displayQuestion();
+        })//gtjson
+
+        function displayQuestion() {
+            var rnd = Math.random() * 4;
+            rnd = Math.ceil(rnd);
+            var q1;
+            var q2;
+            var q3;
+            var q4;
+
+            if (rnd == 1) {
+                q1 = questionBank[questionNumber][1];
+                q2 = questionBank[questionNumber][2];
+                q3 = questionBank[questionNumber][3];
+                q4 = questionBank[questionNumber][4];
+            }
+            if (rnd == 2) {
+                q2 = questionBank[questionNumber][1];
+                q3 = questionBank[questionNumber][2];
+                q4 = questionBank[questionNumber][3];
+                q1 = questionBank[questionNumber][4];
+            }
+            if (rnd == 3) {
+                q3 = questionBank[questionNumber][1];
+                q4 = questionBank[questionNumber][2];
+                q1 = questionBank[questionNumber][3];
+                q2 = questionBank[questionNumber][4];
+            }
+            if (rnd == 4) {
+                q4 = questionBank[questionNumber][1];
+                q3 = questionBank[questionNumber][2];
+                q1 = questionBank[questionNumber][3];
+                q2 = questionBank[questionNumber][4];
+            }
+            $(stage).append('<div class="questionText">' + questionBank[questionNumber][0] + '</div><div id="1" class="option">' + q1 + '</div><div id="2" class="option">' + q2 + '</div><div id="3" class="option">' + q3 + '</div><div id="4" class="option">' + q4 + '</div>');
+
+            $('.option').click(function () {
+                if (questionLock == false) {
+                    questionLock = true;
+                    //correct answer
+                    if (this.id == rnd) {
+                        $(stage).append('<div class="feedback1">CORRECT</div>');
+                        score++;
+                    }
+                    //wrong answer
+                    if (this.id != rnd) {
+                        $(stage).append('<div class="feedback2">WRONG</div>');
+                    }
+                    setTimeout(function () {
+                        changeQuestion()
+                    }, 1000);
+                }
+            })
+        }//display question
+        function changeQuestion() {
+
+            questionNumber++;
+
+            if (stage == "#game1") {
+                stage2 = "#game1";
+                stage = "#game2";
+            }
+            else {
+                stage2 = "#game2";
+                stage = "#game1";
+            }
+
+            if (questionNumber < numberOfQuestions) {
+                displayQuestion();
+            } else {
+                displayFinalSlide();
+            }
+
+            $(stage2).animate({"right": "+=800px"}, "slow", function () {
+                $(stage2).css('right', '-800px');
+                $(stage2).empty();
+            });
+            $(stage).animate({"right": "+=800px"}, "slow", function () {
+                questionLock = false;
+            });
+        }//change question
+
+
+        function displayFinalSlide() {
+
+            $(stage).append('<div class="questionText">congratulations<br><br>attempts attempted: ' + numberOfQuestions + '<br>score: ' + Math.ceil(((score / numberOfQuestions) * 100)) + '%' + '</div>');
+        }//display final slide
+
+    });// button click
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+</script>
+
+</body>
+</html>

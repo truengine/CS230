@@ -1,0 +1,17 @@
+
+
+{ "quizlist":[
+
+  {"question":"a.png","option1":"a","option2":"i","option3":"u","option4":"e"},
+  {"question":"ka.png","option1":"ka","option2":"o","option3":"a","option4":"e"},
+  {"question": "sa.png","option1":"sa","option2":"u","option3":"a","option4":"i"},
+  {"question":"ta.png","option1":"ta","option2":"i","option3":"o","option4":"e"},
+  {"question":"na.png","option1":"na","option2":"i","option3":"u","option4":"e"},
+  {"question":"ha.png","option1":"ha","option2":"i","option3":"o","option4":"e"},
+  {"question":"ma.png","option1":"ma","option2":"i","option3":"o","option4":"e"},
+  {"question":"ya.png","option1":"ya","option2":"i","option3":"o","option4":"e"},
+  {"question":"ra.png","option1":"ra","option2":"i","option3":"o","option4":"e"},
+  {"question":"wa.png","option1":"wa","option2":"i","option3":"o","option4":"e"},
+  {"question":"n.png","option1":"n","option2":"i","option3":"none of these","option4":"e"}
+]}
+

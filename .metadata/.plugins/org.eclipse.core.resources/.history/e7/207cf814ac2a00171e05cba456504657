@@ -1,0 +1,9 @@
+package Meals;
+
+public class Order {
+	
+	public static void OrderMeal(){
+		System.out.println("I'll have the minced carrot, please.");
+	}
+
+}

@@ -1,0 +1,279 @@
+
+#heading, #titl {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 40px;
+    font-weight: 600;
+    //text-shadow: 0px 1px 0px rgba(255,255,255,.5);
+    text-align: center;
+    color: white;
+    letter-spacing: 100px;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    background-color: black;
+
+
+}
+
+#table {
+    margin-left: auto;
+    margin-right: auto;
+   // border-collapse:collapse;
+    border: 2px solid black;
+    background-color: white;
+    box-shadow: -10px 0px 10px 1px #aaaaaa;
+    margin-top:250px;
+    margin-bottom:200px;
+}
+ html, body{
+    margin: 0;
+   // padding: 0;
+    height: 100%;
+     background-color: white;
+     font-effect: engrave;
+}
+
+#all {
+    padding-bottom: 100px;
+    position: fixed;
+    margin:0;
+}
+
+.fixed {
+    position: fixed;
+    top:0; left:0;
+    width: 100%; }
+/*
+#table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse:collapse;
+    border: 2px solid black;
+    background-color: white;
+    box-shadow: -10px 0px 10px 1px #aaaaaa;
+    margin-top:50px;
+    margin-bottom:400px;
+}*/
+#quiztab {
+    display:none;
+    border-collapse:collapse;
+    background-color: black;
+    box-shadow: -10px 0px 10px 1px #aaaaaa;
+    margin-right:auto;
+    margin-left: auto;
+    //margin-bottom: 50px;
+    color: white;
+}
+#traintab{
+    display:none;
+    border-collapse:collapse;
+    background-color: white;
+    box-shadow: -10px 0px 10px 1px #aaaaaa;
+    margin-right:auto;
+    margin-left: auto;
+    //margin-bottom: 50px;
+    color: white;
+}
+td {
+    text-align: center;
+    width: 50px;
+    padding: 20px;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+.justOncePlay{
+    visibility: hidden;
+}
+#setbuttons {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top:20px;
+}
+
+#setbuttons2{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.btn2{
+    display: none;
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: -10px 0px 10px 1px #aaaaaa;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 100%;
+}
+
+.btn{
+    background-color: black;
+    color: black;
+    border: 5px solid white;
+    padding: 12px;
+    box-shadow: -10px 0px 10px 1px #aaaaaa;
+    font-size: 20px;
+    //font-weight: 400;
+    text-align: center;
+    height:92px;
+    width:79px;
+}
+.quizbtn, #quizbtn1, #quizdiv, #quizbtn2,#quizbtn3,#quizbtn4,#quizbtn5{
+    color:white;
+    text-align: center;
+    //padding:10px;
+    font-size:15px;
+    //margin: 10px;
+
+}
+#aset2, #iset2, #uset2, #eset2, #oset2{
+    color:white;
+    font-weight: 600;
+}
+#a{
+    color: deepskyblue;
+}
+#i{
+    color: lawngreen;
+}
+#u{
+    color: yellow;
+}
+#e{
+    color: orangered;
+}
+#o{
+    color: violet;
+}
+.makesomeroomplease{
+    width: 50px;
+    display: inline-table;
+}
+
+a:link    {color:black; background-color:transparent; text-decoration:none}
+a:hover   {color:lightgrey; background-color:transparent; text-decoration:none}
+#footer{
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom:10px;
+    margin-top:50px;
+}
+
+/* QUIZ
+
+
+ */
+
+
+
+#navContent,#navContent2,#navContent3,#navContent4,#navContent5{
+    margin:auto;
+    width:800px;
+    height:400px;
+    position:relative;
+    overflow:hidden;
+}
+#game1,#game12,#game13,#game14,#game15{
+    margin:auto;
+    width:800px;
+    height:400px;
+    right:0px;
+    position:absolute;
+}
+#game2,#game22,#game23,#game24,#game25{
+    margin:auto;
+    width:800px;
+    height:400px;
+    right:-800px;
+    position:absolute;
+}
+
+.questionText{
+    font-size:27px;
+    color:black;
+    background-color: white;
+}
+.option{
+    width:400px;
+    height:30px;
+    margin:15px;
+    font-size:18px;
+    color:white;
+    padding:2px;
+    padding-left:10px;
+    border: 1px solid white;
+    cursor:pointer;
+    background-color:black;
+}
+.option:hover{
+    border:black solid 1px;
+    color:white;
+    font-size:35px;
+}
+#topbar,#topbar2,#topbar3,#topbar4,#topbar5{
+    height:50px;
+    margin:auto;
+    margin-top:50px;
+    color:white;
+    font-size:36px;
+    width:800px;
+    border-bottom:solid white 1px;
+}
+.spacer,.spacer2,.spacer3,.spacer4,.spacer5{
+    height:30px;
+}
+
+.feedback1{
+    width:150px;
+    padding:5px;
+    font-size:30px;
+    color:white;
+    background-color:black;
+    text-align:center;
+}
+
+.feedback2{
+    width:150px;
+    padding:5px;
+    font-size:30px;
+    color:white;
+    background-color:black;
+    text-align:center;
+}
+#wiz,#wiz2,#wiz3,#wiz4,#wiz5 {
+    display:none;
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    background-color: black;
+    text-align: center;
+}
+
+
+.tblLogin {
+    border: #95bee6 1px solid;
+    background: #d1e8ff;
+    border-radius: 4px;
+}
+.tableheader { font-size: 24px; }
+.tableheader td { padding: 20px; }
+.tablerow td { text-align:center; }
+.message {
+    color: #FF0000;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+.login-input {
+    border: #CCC 1px solid;
+    padding: 10px 20px;
+}
+.btnSubmit {
+    padding: 10px 20px;
+    background: #2c7ac5;
+    border: #d1e8ff 1px solid;
+    color: #FFF;
+}
